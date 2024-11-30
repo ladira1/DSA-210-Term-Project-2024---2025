@@ -1,54 +1,80 @@
-Proposal: Correlation Between Daily Entertainment Spending and Class Attendance
-1. Motivation
-The main purpose of this project is to determine the relationship between my daily entertainment spending and the number of classes I attend on a given day. From this correlation, I can gain insight into how my financial habits affect my academic behavior, such as class attendance. This could help me optimize both financial and academic aspects of my life.
+### **DSA 210 Proposal: Analysis of the Relationship Between Daily Entertainment Spending and Class Attendance**  
+**Dilara Uzuner (31319)**
 
-2. Data Source
-Spending Data: Daily entertainment expenses will be retrieved from Akbank's banking application. The entertainment category includes discretionary spending such as dining out, movies, or other leisure activities.
-Class Attendance Data: The number of classes attended daily will be collected from my academic schedule, personal calendar, or institutional attendance records.
-Data Integration: Both datasets will be merged into a time series format where each row represents a day with values for spending and class attendance.
+---
 
-3. Data Analysis Plan
-a. Exploratory Data Analysis (EDA):
-Visualize daily trends in both entertainment spending and class attendance.
-Explore distributions of spending amounts and class counts.
-Identify outliers or anomalies in spending or attendance patterns.
-b. Correlation Analysis:
-Compute Pearson and Spearman correlation coefficients that give a numerical value to the association between spending and class attendance. Identify any temporal effects, such as day-of-the-week effects, which could be influencing the relationship. c. Statistical Testing: Conduct hypothesis testing to assess whether or not the observed correlation is significant. Use time series decomposition to eliminate seasonal or trend effects that may confound the analysis. d. Optional Predictive Modeling:
-Develop regression models to predict class attendance based on spending patterns and any other available features.
+#### **1. Motivation**
 
-4. Methods and Tools
-Data Preprocessing: Handling missing data, duplicate removal, and cleaning of entries; for example, normalizing spending values in case of potential inflation or misclassification of categories.
-Visualization: Time series plots and heatmaps using Python libraries such as Matplotlib and Seaborn.
-Correlation Analysis: Computation of correlations using the Pandas and SciPy libraries.
-Regression Models: Train machine learning models such as Linear Regression or Decision Trees (optional).
+In daily life, spending habits and academic engagement can reflect broader patterns of behavior and priorities. Entertainment spending, a discretionary activity, may influence or correlate with class attendance, an essential part of academic performance. This project seeks to analyze my personal financial and academic habits by studying the relationship between daily entertainment spending and the number of classes I attend.
 
-5. Expected Outputs
-Determine whether spending on entertainment is positively, negatively, or not related to class attendance every day.
-Extract actionable insights that will be useful in enhancing academic performance and better controlling spending habits.
-Communicate through visualizations and statistics that shall clearly illustrate these relationships.
+The objectives of this analysis are as follows:
 
-6. Challenges and Limitations
-Data Accuracy: The manual categorization of spending could result in misclassification.
-Confounding Variables: Health, weather, or other exam schedules are a few factors that can affect attendance in class but are not taken into consideration here.
-Short Time Period: The data collection period might be too short to generalize the findings.
+- Gain a better understanding of the relationship between discretionary spending and academic commitment.  
+- Identify patterns in my daily behaviors to improve both financial and academic management.  
+- Present an insightful case study that may inspire further exploration in behavioral data analysis.  
 
-7. Future Work
-Consider extending the analysis to other variables: sleep duration, exercising habits, or academic workload.
-Use a longer-term dataset for more robust findings.
-Create a dashboard that provides real-time insights into spending and academic trends.
+---
 
-8. Deliverables
-Public Github Repository: All project materials will be uploaded to a public repository, including:
-A comprehensive README.md file detailing the project, dataset, and analysis plan.
-Jupyter notebooks containing data cleaning, EDA, and correlation analysis scripts.
-Visualization outputs and reports summarizing the findings.
-Final Report: A summary of findings and recommendations based on the analysis.
+#### **2. Data Source**
 
-9. Timeline
-Nov 30: Project Proposal with a README.md for the Github repository.
-Dec 10: Finish Data Collection, Preprocessing.
-Dec 20: Complete EDA and Correlation Analysis.
-Jan 10: Final Submission of project, all components uploaded on Github.
+##### **Data Collection Process**
+1. **Spending Data:**
+   - Source: Daily entertainment spending data will be extracted from Akbank’s digital banking platform.
+   - Variables: Entertainment spending amounts in Turkish Lira (₺) recorded daily.
+2. **Class Attendance Data:**
+   - Source: Daily class schedules and attendance records will be collected from my personal calendar or academic portal.
+   - Variables: Number of classes attended daily.  
+3. **Duration:**
+   - Data will be collected over a period of 30 consecutive days to ensure enough variability for analysis.  
+4. **Additional Notes:**
+   - Contextual events (e.g., exam periods, holidays) that may influence spending or attendance will be documented to account for outliers.
 
-10. Relevance and Significance
-This project aligns with the principles of personalized data science, leveraging individual data to gain meaningful insights. It also showcases diverse techniques, from EDA to predictive modeling, and demonstrates the practical value of analyzing one's behavior through data.
+##### **Data Features**
+- **Primary Variables:**
+  - Entertainment spending (in Turkish Lira, ₺).  
+  - Number of classes attended.  
+- **Daily Records:** One record per day with both variables.  
+- **Additional Notes:** Annotated events that could significantly affect spending or attendance.
+
+---
+
+#### **3. Data Analysis**
+
+##### **3.1 Data Cleaning and Preprocessing**
+- Handle missing data entries or inconsistencies.
+- Convert all spending values to a common currency (₺).  
+- Normalize values to account for any extreme outliers or anomalies (e.g., unusually high spending days due to specific events).  
+
+##### **3.2 Exploratory Data Analysis (EDA)**
+- **Descriptive Statistics:**
+  - Calculate mean, median, and standard deviation for both spending and attendance.  
+- **Visualization:**
+  - Plot histograms to show distributions of spending and class attendance.
+  - Create time-series plots to visualize daily trends.  
+
+##### **3.3 Correlation Analysis**
+- **Correlation Coefficients:**
+  - Compute Pearson Correlation to assess the linear relationship between spending and attendance.
+  - Use Spearman Correlation to evaluate potential non-linear relationships.  
+- **Scatter Plots:**
+  - Create scatter plots with regression lines to visualize the relationship between spending and attendance.
+
+##### **3.4 Additional Analyses**
+- Analyze trends in spending and attendance between weekdays and weekends.  
+- Identify any patterns or outliers associated with specific events (e.g., holidays, exams).  
+- Explore potential lagged correlations (e.g., spending the night before impacting next-day attendance).  
+
+##### **3.5 Tools and Methods**
+- **Python:** Use libraries such as Pandas, Matplotlib, and Seaborn for data cleaning, analysis, and visualization.  
+- **Excel/Google Sheets:** As a supplementary tool for tracking data and performing basic analysis.  
+
+---
+
+#### **4. Expected Outcomes**
+1. If a correlation exists, the nature of the correlation (positive, negative, or neutral) will be identified.  
+2. Insights into how daily financial decisions may impact academic habits.  
+3. Recommendations for balancing spending and academic commitment based on identified patterns.  
+4. A detailed report and visualizations that summarize findings and propose actionable strategies.  
+
+ 
+
